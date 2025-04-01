@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動領領養(首頁)</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        #s03{
+    border-bottom: 1px solid #444; /* 在底部加一條線 */
+    
+}
+      #s04{
+    border-bottom: 1px solid #444; /* 在底部加一條線 */
+    
+}
+#s13{
+    border-bottom: 1px solid #444; /* 在底部加一條線 */
+    padding-bottom: 20px; /* 讓它與內容有點距離 */
+    padding-top: 20px; /* 調整數值來增加上方空間 */
+}
+
+        .s02-text {
+            background-color: rgba(136, 49, 170, 0.2);
+            padding: 5px;
+        }
+        .navbar-nav .nav-link {
+            color:black; /* 修改為你想要的顏色 */
+        }
+        .navbar-nav .nav-link:hover {
+          color:var(--mycolor20); /* 當滑鼠懸停時的顏色 */
+        }
+        .navbar-nav .nav-link.active {
+            color:black; /* 使用 !important 來提高優先級 */
+    }
+
+#s13 {
+    padding-top: 30px; /* 調整數值來增加上方空間 */
+}
+        @media screen and (max-width: 768px) {
+
+            .s05-text,
+            .s08-text {
+                z-index: 10;
+                background-color: rgba(231, 176, 210, 0.411);
+                color: var(--textcolor01);
+                margin: 15px;
+                box-shadow: 2px 2px 4px 2px #faf9f9;
+                border-radius: 15px;
+                padding: 15px;
+            }
+        }
+     
+        body {
+            font-family: "Zen Maru Gothic", serif;
+        }
+        #s01 i {
+    color: var(--mycolor11); /* 使用變數 */
+}
+
+/* 圖片容器必須是 relative，這樣 figcaption 才能正確定位 */
+.u-shadow-v25 {
+    position: relative; /* 讓子元素可以使用 absolute 定位 */
+}
+
+/* 讓 figcaption 浮動在圖片左上角 */
+.custom-figcaption {
+    position: absolute;  /* 讓它浮動在圖片內 */
+    top: 10px;          /* 距離圖片頂部 10px */
+    left: 10px;         /* 距離圖片左側 10px */
+    z-index: 10;        /* 確保它顯示在最上層 */
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
+    padding: 5px 10px;  /* 內邊距，讓標籤更清楚 */
+    border-radius: 3px; /* 圓角 */
+}
+
+/* 自訂按鈕樣式 */
+.custom-btn {
+    color: white;             /* 文字顏色 */
+    font-size: 12px;          /* 字體大小 */
+    font-weight: bold;        /* 文字加粗 */
+    text-transform: uppercase; /* 全大寫 */
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- section 01 -->
+    <section id="s01" style="background-color:#FFFAF2;" class="py-1">
+        <div class="container">
+            <div class="text-end">
+                <a href="#"><i class="fa-brands fa-facebook-f pe-1 tx-03"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter pe-1 tx-03"></i></a>
+                <a href="#"><i class="fa-brands fa-threads pe-1 tx-03"></i></a>
+                <a href="#"><i class="fa-brands fa-line pe-1 tx-03"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram pe-1 tx-03"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 02 -->
+    <section id="s02" class="bg-001">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-001 navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa fa-paw fa-regular fa-4x" style="color: #8b6f4f;"></i>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item dropdown bg-002 ms-5">
+                                <a class="nav-link" href="animals.html">
+                                    <i class="fa fa-heart-o nav-icon" aria-hidden="true"></i>
+                                    <span>首頁</span>
+                                </a>
+                            </li>
+            
+                            <li class="nav-item dropdown bg-002 ms-5">
+                                <a class="nav-link" href="animal_data.html">
+                                    <i class="fa fa-heart-o nav-icon" aria-hidden="true"></i>
+                                    <span>公立領養</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown bg-002 ms-5">
+                                <a class="nav-link" href="animal_kw.html">
+                                    <i class="fa fa-heart-o nav-icon" aria-hidden="true"></i>
+                                    <span>民眾領養</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown bg-002 ms-5">
+                                <a class="nav-link" href="animal_kw.html">
+                                    <i class="fa fa-heart-o nav-icon" aria-hidden="true"></i>
+                                    <span>寵物小知識</span>
+                                </a>
+                            </li>
+
+                            <li id="public_adoption_nav" class="nav-item dropdown bg-002 ms-5 d-none">
+                                <a class="nav-link" href="adopt_manage.html">
+                                    <i class="fa fa-heart-o nav-icon" aria-hidden="true"></i>
+                                    <span>領養刊登管理</span>
+                                </a>
+                            </li>
+                            
+                            
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link fw-900 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" style="font-size: 22px;">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item fw-900" href="#" style="font-size: 20px;">Action</a></li>
+                                    <li><a class="dropdown-item fw-900" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider fw-900" style="font-size: 22px;">
+                                    </li>
+                                    <li><a class="dropdown-item fw-900" href="#" style="font-size: 22px;">Something else here</a></li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                        <div>
+                           <!-- 套用 CSS 變數 --mycolor01 -->
+                        <span class="h4 fw-900 me-3 d-none" id="s02_username_showtext" style="color: var(--mycolor09);">
+                            歡迎會員: <span class="h3" id="s02_username_text">XXX</span>
+                        </span>
+
+                        <button class="btn" style="background-color: #f0e0da;" data-bs-toggle="modal" data-bs-target="#registerModal"
+                            id="s02_reg_btn">註冊</button>
+                        <button class="btn bg-005" data-bs-toggle="modal" data-bs-target="#loginModal"
+                            id="s02_login_btn">登入</button>
+                        <button class="btn bg-003 d-none" id="s02_logout_btn">登出</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-l">
+            <div class="modal-content">
+                <div class="modal-header bg-005" style="color: black;">
+                    <h1 class="modal-title fs-4 fw-900" id="exampleModalLabel">領養人註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-11">
+                            <div class="mb-3">
+                                <label for="username_reg" class="form-label">帳號</label>
+                                <input type="text" class="form-control is-invalid" id="username_reg" name="username_reg"
+                                    placeholder="3-6字數">
+                                    <div class="valid-feedback" id="regModal_username_valid_feedback">符合規則</div>
+                                    <div class="invalid-feedback" id="regModal_username_invalid_feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password_reg" class="form-label">密碼</label>
+                                <input type="password" class="form-control is-invalid" id="password_reg"
+                                    name="password_reg" placeholder="3-6字數">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="re_password_reg" class="form-label">確認密碼</label>
+                                <input type="password" class="form-control is-invalid" id="re_password_reg"
+                                    name="re_password_reg">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email_reg" class="form-label">Email</label>
+                                <input type="email" class="form-control is-invalid" placeholder="3-10字數" id="email_reg"
+                                    name="email_reg">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background-color: #f0e0da;" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn bg-005" id="ok_btn_reg">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-005">
+                    <h1 class="modal-title  fs-4 fw-900" id="exampleModalLabel">領養人登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="username_login" class="form-label">帳號</label>
+                        <input type="text" class="form-control is-invalid" id="username_login" name="username_login">
+                        <div class="invalid-feedback">請輸入帳號</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password_login" class="form-label">密碼</label>
+                        <input type="password" class="form-control is-invalid" id="password_login"
+                            name="password_login">
+                        <div class="invalid-feedback">請輸入密碼</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background-color: #f0e0da;"  data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn bg-005" id="ok_btn_login">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- section 03 -->
+    <section id="s03">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item bg-cover active" style="height: 70vh; background-image: url(imgs/ani1.jpg);">
+                    <div class="carousel-caption d-none d-md-block p-3 rounded-4 shadow-lg"
+                        style="background-color: rgba(0, 0, 0, 0.2);">
+                        <div class="carousel-caption p-3 rounded-2 shadow-lg d-none d-md-block text-center"
+                            style="background-color:#f7f0e2;">
+                            <h3 class="fw-600" style="color: #d67457;" >「領養代替購買，讓愛不流浪。」</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="height: 70vh; background-image: url(imgs/ani15.jpg);">
+                    <div class="carousel-caption d-none d-md-block p-3 rounded-4 shadow-lg"
+                    style="background-color:#f0ecda;">
+                        <h3 class="fw-600" style="color: #d67457;" >「別讓愛等待，給浪浪一個溫暖的未來。」</h3>
+
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item bg-cover" style="height: 70vh; background-image: url(imgs/ani5.jpg);">
+                    <div class="carousel-caption d-none d-md-block p-3 rounded-4 shadow-lg"
+                    style="background-color:#f0ecda;">
+                        <h3 class="fw-600" style="color: #d67457;" >「你的一次選擇，改變牠的一生。」</h3>
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- -->
+    <section id="s13" class="bg-001" >
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-5 bg-cover" style="background-image: url(imgs/ani17.jpg); height: 450px; margin-left: 50px;"></div>
+                <div class="col-6 p-5 text-center">
+                    <div class="h1 fw-900">為什麼要選擇<span class="" style="color: #BC5F6A;">領養?</span></div>
+                   
+                    <p class="mb-1 fw-500" style="font-size: 24px;">你可以拯救一隻狗/貓的生命，免於安樂死</p>
+                    <p class="mb-1 fw-300" style="font-size: 20px;">每年都有上百萬隻動物被安樂死，在臺灣，則是進到收容所後12天沒有人領養，就會被安樂死。因為人類棄養他們、繁殖場大量繁殖，讓流浪動物數目變成大問題。</p>
+                    <p class="mb-1 fw-300" style="font-size: 20px;"> 如果你從收容所認養，你就從這殘忍的體制中，拯救了另一個生命。</p>
+                   
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-4">
+                            <div class="h4 fw-900">全台犬貓數量</div>
+                            <div class="h1 fw-900 counter01">2,950,000 <span class="h4">/隻</span></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="h4 fw-900">收容所流浪犬貓數量</div>
+                            <div class="h1 fw-900 counter02">180,000<span class="h4">/隻</span></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="h4 fw-900">無法獲得收容所保護的犬貓</div>
+                            <div class="h1 fw-900 counter03" style="color: #BC5F6A;">95% <span class="h4"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section 04 -->
+    <section id="s04" class="bg-001">
+        <div class="container">
+            <div class="row">
+                <!-- 影音推薦標題 -->
+                <div class="u-heading-v3-1 g-mb-30 mt-5 mb-3">
+                    <h2 class="h5 fw-900" style="font-size:33px;">
+                        影音推薦
+                    </h2>
+                </div>
+            </div>
+    
+            <!-- 讓兩個影片並排 -->
+            <div class="row g-mb-30">
+                <!-- 第一部影片 -->
+                <div class="col-md-4">
+                    <article>
+                        <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                            <img class="img-fluid w-100 lazyloaded"
+                                data-src="https://img.youtube.com/vi/nEfwHbvaE4M/maxresdefault.jpg"
+                                alt="石虎不由保育員大量繁殖的真正原因!"
+                                src="https://img.youtube.com/vi/nEfwHbvaE4M/maxresdefault.jpg">
+                            <figcaption class="custom-figcaption">
+                                <span class="custom-btn">影音</span>
+                            </figcaption>
+                            <a class="g-font-size-24--md" href="/Video?Id=31">
+                                <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
+                                    <i class="fa fa-play g-left-2"></i>
+                                </span>
+                            </a>
+                        </figure>
+                        <h3 class="h4 g-mb-15">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="https://www.youtube.com/watch?v=nEfwHbvaE4M">如何得到一隻貓?</a>
+                        </h3>
+                        <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                            <li class="list-inline-item">
+                                <span class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover">好味小姐Lady Flavor</span>
+                            </li>
+                            <li class="list-inline-item">/</li>
+                            <li class="list-inline-item">
+                                <span class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover">Aug 27, 2019</span>
+                            </li>
+                        </ul>
+                        <p class="g-color-gray-dark-v2 mb-3">養貓之前要審慎評估自己在做決定唷～</p>
+                    </article>
+                </div>
+    
+                <!-- 第二部影片 -->
+                <div class="col-md-4">
+                    <article>
+                        <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                            <img class="img-fluid w-100 lazyloaded"
+                                data-src="https://img.youtube.com/vi/U70XVBE3cQI/maxresdefault.jpg"
+                                alt="石虎不由保育員大量繁殖的真正原因!"
+                                src="https://img.youtube.com/vi/U70XVBE3cQI/maxresdefault.jpg">
+                            <figcaption class="custom-figcaption">
+                                <span class="custom-btn">影音</span>
+                            </figcaption>
+                            <a class="g-font-size-24--md" href="/Video?Id=31">
+                                <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
+                                    <i class="fa fa-play g-left-2"></i>
+                                </span>
+                            </a>
+                        </figure>
+                        <h3 class="h4 g-mb-15">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="https://www.youtube.com/watch?v=U70XVBE3cQI">領養狗狗，你準備好了嗎？</a>
+                        </h3>
+                        <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                            <li class="list-inline-item">
+                                <span class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover">熊爸估狗</span>
+                            </li>
+                            <li class="list-inline-item">/</li>
+                            <li class="list-inline-item">
+                                <span class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover">  Dec 31, 2021</span>
+                            </li>
+                        </ul>
+                        <p class="g-color-gray-dark-v2 mb-5">當你決定領養狗，請先做好功課，然後了解牠、花時間陪伴牠！
+                            </p>
+                    </article>
+                </div>
+                 <!-- 第三部影片 -->
+                 <div class="col-md-4">
+                    <article>
+                        <figure class="u-shadow-v25 g-pos-rel g-mb-20">
+                            <img class="img-fluid w-100 lazyloaded"
+                                data-src="https://img.youtube.com/vi/cje2V2mZvWg/maxresdefault.jpg"
+                                alt="石虎不由保育員大量繁殖的真正原因!"
+                                src="https://img.youtube.com/vi/cje2V2mZvWg/maxresdefault.jpg">
+                            <figcaption class="custom-figcaption">
+                                <span class="custom-btn">影音</span>
+                            </figcaption>
+                            <a class="g-font-size-24--md" href="/Video?Id=31">
+                                <span class="u-icon-v3 u-icon-size--sm g-font-size-13 g-bg-white g-bg-black--hover g-color-white--hover rounded-circle g-cursor-pointer g-absolute-centered">
+                                    <i class="fa fa-play g-left-2"></i>
+                                </span>
+                            </a>
+                        </figure>
+                        <h3 class="h4 g-mb-15">
+                            <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="https://www.youtube.com/watch?v=cje2V2mZvWg&t=39s">流浪貓狗哪裡來?</a>
+                        </h3>
+                        <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+                            <li class="list-inline-item">
+                                <span class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover">志祺七七 X 圖文不符</span>
+                            </li>
+                            <li class="list-inline-item">/</li>
+                            <li class="list-inline-item">
+                                <span class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover"> Sep 13, 2019</span>
+                            </li>
+                        </ul>
+                        <p class="g-color-gray-dark-v2 mb-3">留言區超重要！</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- section 05  -->
+    <!-- <section id="s05" class="position-relative " style="background-color: #fcf3f4;">
+        <div class="row">
+            <td class="content">
+                <div class="xs_title hidden-lg">
+                    臘腸狗的常見疾病！
+                </div>
+                <div class="created_at">2020-08-18</div>
+                <div class="category_info">寵物知識＋</div>
+                <p>
+                    臘腸狗全身上下都有些常見疾病，身為臘腸狗狗的飼主可要特別小心留意喔●中耳炎/外耳炎：臘腸狗狗因為是垂耳狗，所以耳朵容易藏污納垢，平時不要忘了幫狗狗清耳朵，洗完澡也要記得仔細吹乾喔！●心臟問題：由於品種
+                     ...                                     </p>
+                <center>
+                    <a href="https://langlanglove.com/blog/14" class="btn btn-default btn-show" title="臘腸狗的常見疾病！" target="_blank">
+                        詳細資料
+                    </a>
+                </center>
+            </td>
+        </div>
+    </section> -->
+   
+    <!-- section 12 動物領養流程 -->
+    <section id="adoption-process" class="bg-secondary py-5 bg-cover"
+    style="background-image: url(imgs/ani13.jpg); background-attachment: fixed;">
+    <div class="container">
+        <div class="row justify-content-end align-items-center">
+            <div class="col-md-3 bg-001 text-center">
+                <div class="s12-text">
+                    <div class="h1" style="color: #8b5d4f;">領養流程</div>
+                    <p class="fs-5">想領養毛孩嗎？</p>
+                    <p class="fs-5">這裡是完整的領養流程，請詳閱後開始行動！</p>
+                </div>
+            </div>
+            <div class="row col-md-8">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="s12-text text-white rounded-3 shadow-lg">
+                            <h2>1. 選擇動物</h2>
+                            <p>在收容所或網站上瀏覽待領養的動物，找到適合自己家庭的毛孩。</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="s12-img bg-cover rounded-3 shadow-lg"
+                            style="height: 220px; background-image: url(imgs/select-animal.jpg);"></div>
+                    </div>
+                </div>
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-6">
+                        <div class="s12-text text-white rounded-3 shadow-lg">
+                            <h2>2. 填寫申請</h2>
+                            <p>填寫領養申請表，提供基本資料及照顧計畫，以確保能為動物提供良好環境。</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="s12-img bg-cover rounded-3 shadow-lg"
+                            style="height: 220px; background-image: url(imgs/application-form.jpg);"></div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="s12-text text-white rounded-3 shadow-lg">
+                            <h2>3. 審核與面談</h2>
+                            <p>收容所將審核申請，並安排面談或家訪，確認是否適合領養。</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="s12-img bg-cover rounded-3 shadow-lg"
+                            style="height: 220px; background-image: url(imgs/interview.jpg);"></div>
+                    </div>
+                </div>
+                <div class="row align-items-center flex-row-reverse">
+                    <div class="col-6">
+                        <div class="s12-text text-white rounded-3 shadow-lg">
+                            <h2>4. 完成領養</h2>
+                            <p>通過審核後，簽署領養合約，接毛孩回家！提供愛與照顧，讓牠有個溫暖的家。</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="s12-img bg-cover rounded-3 shadow-lg"
+                            style="height: 220px; background-image: url(imgs/adopt-success.jpg);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 
+    section 11 友站和版權
+    <section id="s11">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link disabled">By planet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">水晶客製</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">XXX</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">XXX</a>
+                </li>
+            </ul>
+        </div>
+    </section> -->
+
+    <!-- <script src="Content/lazysizes.min.js" async=""></script> -->
+   <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        var flag_username_reg = false;
+        var flag_password_reg = false;
+        var flag_re_password_reg = false;
+        var flag_chk01_reg = false;
+        var flag_username_login = false;
+        var flag_password_login = false;
+    
+        $(function () {
+            //wowjs
+            new WOW().init();
+    
+            //counterup2
+            const counterUp = window.counterUp.default
+    
+            const callback = entries => {
+                entries.forEach(entry => {
+                    const el = entry.target
+                    if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                        counterUp(el, {
+                            duration: 2000,
+                            delay: 16,
+                        })
+                        el.classList.add('is-visible')
+                    }
+                })
+            }
+    
+            const IO = new IntersectionObserver(callback, { threshold: 1 })
+    
+            const el01 = document.querySelector('.counter01')
+            IO.observe(el01)
+    
+            const el02 = document.querySelector('.counter02')
+            IO.observe(el02)
+    
+            const el03 = document.querySelector('.counter03')
+            IO.observe(el03)
+    
+            // 載入縣市資料
+            $.ajax({
+                type: "GET",
+                url: "js/CityCountyData.json",
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    console.log(data);
+                    city = data;
+                },
+                error: function () {
+                    console.log("error-js/CityCountyData.json");
+                }
+            });
+    
+            // 顯示縣市選單
+            $("#selectCity").empty();
+            $("#selectCity").append('<option value="" class="text-center" selected disabled>---選擇縣市名稱---</option>');
+            city.forEach(function (item) {
+                var strHTML = `<option value="${item.CityName}">${item.CityName}</option>`;
+                $("#selectCity").append(strHTML);
+            });
+    
+            // 監聽縣市選單
+            $("#selectCity").change(function () {
+                selectedCity = $(this).val();
+                city.forEach(function (item) {
+                    if (item.CityName == selectedCity) {
+                        $("#selectArea").empty();
+                        $("#selectArea").append('<option value="" class="text-center" selected disabled>---選擇鄉鎮區名稱---</option>');
+                        item.AreaList.forEach(function (myitem) {
+                            var strHTML = `<option value="${myitem.AreaName}">${myitem.AreaName}</option>`;
+                            $("#selectArea").append(strHTML);
+                        });
+                    }
+                });
+            });
+    
+    
+            // 即時監聽username_reg
+            $("#username_reg").bind("input propertychange", function () {
+                if ($(this).val().length > 2 && $(this).val().length < 7) {
+                    var JSONdata = { username: $("#username_reg").val() };
+                    $.ajax({
+                        type: "POST",
+                        url: "ani_member_control_api_v1.php?action=checkuni",
+                        data: JSON.stringify(JSONdata),
+                        dataType: "json",
+                        success: showdata_checkuni,
+                        error: function () {
+                            Swal.fire({
+                                title: "API介接錯誤?",
+                                text: "ani_member_control_api_v1.php?action=checkuni",
+                                icon: "error"
+                            });
+                        }
+                    });
+                } else {
+                    $(this).removeClass("is-valid").addClass("is-invalid");
+                    $("#regModal_username_invalid_feedback").text("帳號長度需介於 3-6 字元！");
+                    flag_username_reg = false;
+                }
+            });
+
+           // 即時監聽密碼輸入框
+$("#password_reg").on("input", function () {
+    let password = $(this).val();
+    if (password.length >= 2) { // 只要2個字以上
+        $(this).removeClass("is-invalid").addClass("is-valid");
+    } else {
+        $(this).removeClass("is-valid").addClass("is-invalid");
+    }
+});
+
+// 即時監聽確認密碼輸入框
+$("#re_password_reg").on("input", function () {
+    let password = $("#password_reg").val();
+    let rePassword = $(this).val();
+    if (rePassword === password && rePassword.length >= 2) { // 密碼一致且2字以上
+        $(this).removeClass("is-invalid").addClass("is-valid");
+    } else {
+        $(this).removeClass("is-valid").addClass("is-invalid");
+    }
+});
+
+// 即時監聽Email輸入框
+$("#email_reg").on("input", function () {
+    let email = $(this).val();
+    if (email.length >= 2) { // 只要2個字以上
+        $(this).removeClass("is-invalid").addClass("is-valid");
+    } else {
+        $(this).removeClass("is-valid").addClass("is-invalid");
+    }
+});
+
+$("#ok_btn_reg").on("click", function () {
+    let username = $("#username_reg").val();
+    let password = $("#password_reg").val();
+    let rePassword = $("#re_password_reg").val();
+    let email = $("#email_reg").val();
+
+    if (!username || !password || !rePassword || !email) {
+        Swal.fire("請完整填寫所有欄位！");
+        return;
+    }
+
+    if (password !== rePassword) {
+        Swal.fire("密碼與確認密碼不一致！");
+        return;
+    }
+
+    let JSONdata = { username, password, email };
+
+    $.ajax({
+        type: "POST",
+        url: "ani_member_control_api_v1.php?action=register",
+        data: JSON.stringify(JSONdata),
+        dataType: "json",
+        success: function (response) {
+            if (response.state) {
+                Swal.fire({
+                    title: "註冊成功！",
+                    text: "歡迎 " + response.data.Username,
+                    icon: "success"
+                }).then(() => {
+                    $("#registerModal").modal("hide");
+                    location.reload(); // 重新整理頁面
+                });
+            } else {
+                Swal.fire({
+                    title: "註冊失敗",
+                    text: response.message,
+                    icon: "error"
+                });
+            }
+        },
+        error: function () {
+            Swal.fire("API 錯誤", "無法連線到伺服器", "error");
+        }
+    });
+});
+    
+            // ok_btn_login 按鈕監聽
+            $("#ok_btn_login").on("click", function () {
+                var loginData = {
+                    username: $("#username_login").val(),
+                    password: $("#password_login").val()
+                };
+    
+                $.ajax({
+                    type: "POST",
+                    url: "ani_member_control_api_v1.php?action=login",
+                    data: JSON.stringify(loginData),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.state) {
+                            Swal.fire({
+                                title: "登入成功！",
+                                text: "歡迎回來，" + response.data.Username,
+                                icon: "success"
+                            }).then(() => {
+                                setCookie("Uid01", response.data.Uid01, 7);
+                                updateUI(true, response.data.Username);
+                                $("#loginModal").modal("hide");
+                            });
+                        } else {
+                            Swal.fire({
+                                title: "登入失敗",
+                                text: response.message,
+                                icon: "error"
+                            });
+                        }
+                    },
+                    error: function (xhr) {
+                        Swal.fire({
+                            title: "錯誤",
+                            text: "無法連線到伺服器。",
+                            icon: "error"
+                        });
+                    }
+                });
+            });
+    
+        // 清除指定的 Cookie
+function clearCookie(cname) {
+    document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+// 登出按鈕監聽
+$("#s02_logout_btn").click(function () {
+    var JSONdata = JSON.stringify({ uid01: getCookie("Uid01") });
+    console.log("發送至後端的 JSONdata：", JSONdata);
+
+    $.ajax({
+        type: "POST",
+        url: "ani_member_control_api_v1.php?action=logout",
+        data: JSONdata,
+        contentType: "application/json",
+        dataType: "json",
+        success: function (response) {
+            console.log("後端回應：", response);
+
+            if (response.state) {
+                // 清除 Cookie
+                clearCookie("Uid01");
+
+                // 更新介面
+                updateUI(false);
+
+                // 提示登出成功
+                Swal.fire({
+                    title: "已登出",
+                    icon: "success"
+                }).then(() => {
+                    location.reload();
+                });
+            } else {
+                Swal.fire({
+                    title: "登出失敗",
+                    text: response.message || "登出時發生錯誤",
+                    icon: "error"
+                });
+            }
+        },
+        error: function (xhr) {
+            console.error("登出請求失敗", xhr.responseText);
+            Swal.fire({
+                title: "錯誤",
+                text: "無法連線到伺服器。",
+                icon: "error"
+            });
+        }
+    });
+});
+
+            // 檢查帳號是否重複的回應處理
+function showdata_checkuni(data) {
+    console.log("檢查帳號重複回應:", data);
+
+    if (data.state) {
+        $("#username_reg").removeClass("is-invalid").addClass("is-valid");
+        $("#regModal_username_valid_feedback").text(data.message);
+    } else {
+        $("#username_reg").removeClass("is-valid").addClass("is-invalid");
+        $("#regModal_username_invalid_feedback").text(data.message);
+    }
+}
+
+$(document).ready(function () {
+    checkLoginStatus();
+});
+
+// 檢查登入狀態
+function checkLoginStatus() {
+    var uid = getCookie("Uid01");
+    console.log("檢查登入狀態，Uid01:", uid);
+
+    if (uid) {
+        // 透過後端確認 uid 是否有效
+        $.ajax({
+            type: "POST",
+            url: "ani_member_control_api_v1.php?action=checkuid",
+            data: JSON.stringify({ uid01: uid }),
+            contentType: "application/json",
+            dataType: "json",
+            success: function (response) {
+                console.log("後端回應:", response);
+                if (response.state) {
+                    updateUI(true, response.data.Username);
+                } else {
+                    updateUI(false);
+                    showLoginAlert(); // 沒有登入或失效則提示
+                }
+            },
+            error: function () {
+                console.error("檢查登入狀態失敗");
+                updateUI(false);
+                showLoginAlert(); // 如果後端沒回應也提示
+            }
+        });
+    } else {
+        updateUI(false);
+        showLoginAlert(); // 沒有 Uid01 時直接提示
+    }
+}
+    
+            // 更新 UI        
+function updateUI(isLoggedIn, username = "") {
+    if (isLoggedIn) {
+        // 顯示登入後才會出現的項目
+        $("#s02_reg_btn, #s02_login_btn").addClass("d-none");
+        $("#s02_logout_btn, #s02_username_showtext, #s02_control_panel_btn").removeClass("d-none");
+        $("#public_adoption_nav").removeClass("d-none"); // 顯示公立領養選單
+        $("#s02_username_text").text(username);
+    } else {
+        // 登出後隱藏選單
+        $("#s02_reg_btn, #s02_login_btn").removeClass("d-none");
+        $("#s02_logout_btn, #s02_username_showtext, #s02_control_panel_btn").addClass("d-none");
+        $("#public_adoption_nav").addClass("d-none"); // 隱藏公立領養選單
+        $("#s02_username_text").text("");
+    }
+}
+
+// SweetAlert 提示框
+function showLoginAlert() {
+    Swal.fire({
+        title: "請先登入會員！",
+        text: "登入後才可以使用領養刊登功能！",
+        icon: "info",
+        confirmButtonText: "確定"
+    });
+}
+
+    
+            // 設定 Cookie
+            function setCookie(cname, cvalue, exdays) {
+                const d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                document.cookie = `${cname}=${cvalue};expires=${d.toUTCString()};path=/`;
+            }
+    
+            // 取得 Cookie
+            function getCookie(cname) {
+                let name = cname + "=";
+                let ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i].trim();
+                    if (c.indexOf(name) === 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+        });
+    
+    </script>
+    
+</body>
+
+</html>
