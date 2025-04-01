@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Noto+Serif+HK:wght@200..900&display=swap');
+/* font-family: "Noto Serif HK", serif; */
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Noto+Serif+HK:wght@200..900&family=Yusei+Magic&display=swap');
+/* font-family: "Yusei Magic", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Noto+Serif+HK:wght@200..900&family=Yusei+Magic&family=Zen+Maru+Gothic&display=swap');
+/* font-family: "Zen Maru Gothic", serif; */
+@media screen and (max-width: 768px){
+    /* body{
+        background-image: linear-gradient(90deg, rgba(129, 81, 81, 0.1), rgba(214, 186, 93, 0.8));
+    } */
+    .table-rwd thead{
+        display: none;
+    }
+    .table-rwd tbody tr{
+        display: block;
+        border: 2px solid var(--mycolor02);
+        margin-bottom: 10px;
+    }
+    .table-rwd tbody tr td{
+        display: block;
+        overflow: hidden;
+    }
+    .table-rwd tbody tr td::before{
+        content: attr(data-th) " : ";
+        font-weight: 900;
+        color: var(--mycolor02);
+        font-size: 22px;
+        display: block;
+        float: left;
+        width: 30%;
+        text-align: right;
+        padding-right: 20px;
+    }
+    .table-rwd tbody tr td span.table-col{
+        display: block;
+        float: left;
+        width: 70%;
+    }
+}
+/*
+table
+*/
+:root{
+    --mycolor01:#E3A6A1;
+    --mycolor02:#BC5F6A;
+    --mycolor03:#19B3B1;
+    --mycolor04:#034B6E;
+
+    --mycolor06:#A6C2CE;
+    --mycolor07:#9C8F96;
+    --mycolor08:#EBC57C;
+    --mycolor09:#6B799E;
+
+    --mycolor10:#B2A59F;
+    --mycolor11:#023459;
+    --mycolor12:#1E646E;
+    --mycolor13:#002C2F;
+
+    --mycolor15:#CCD3D9;
+    --mycolor16:#FED5D9;
+    --mycolor17:#7E212C;
+    --mycolor18:#321E17;
+
+    --mycolor19:#ECEC84;
+    --mycolor20:#FFB69B;
+    --mycolor21:#A299CA;
+    --mycolor22:#7CCAAE;
+
+}
+/* 背景顏色 */
+.bg-001{
+    background-color:#FFFAF2;
+}
+.bg-002{
+    background-color: #FFF4D6;
+}
+.bg-003{
+    background-color: #FDC5B4;
+}
+.bg-004{
+    background-color: #F7A072;
+}
+.bg-005{
+    background-color: #cedeec;
+}
+.bg-006{
+    background-color: #6D9773;
+}
+.bg-007{
+    background-color: #FFD3BA;
+}
+.bg-008{
+    background-color: #E6A57E;
+}
+
+
+
+
+.bg-01{
+    background-color:#5f6c7b;
+}
+.bg-02{
+    background-color:#094067;
+}
+.bg-03{
+    background-color:#3da9fc;
+}
+.bg-04{
+    background-color:#b8c1ec;
+}
+.bg-05{
+    background-color:#eebbc3;
+}
+.bg-06{
+    background-color:#D2E0FB;
+}
+.bg-07{
+    background-color:#FEF9D9;
+}
+.bg-08{
+    background-color:#DEE5D4;
+}
+.bg-09{
+    background-color:#F2D7D9;
+}
+.bg-10{
+    background-color:#D3CEDF;
+}
+
+.bg-11{
+    background-color:#A6C2CE;
+}
+.bg-12{
+    background-color:#9C8F96 ;
+}
+.bg-13{
+    background-color:#EBC57C ;
+}
+.bg-14{
+    background-color:#6B799E ;
+}
+.bg-15{
+    background-color:#7d9178 ;
+}
+.bg-16{
+    background-color:#CCD3D9 ;
+}
+.bg-17{
+    background-color:#fca157 ;
+}
+/* 文字粗體 */
+.fw-100{
+    font-weight:100;
+}
+.fw-200{
+    font-weight:200;
+}
+.fw-300{
+    font-weight:300;
+}
+.fw-400{
+    font-weight:400;
+}
+.fw-500{
+    font-weight:500;
+}
+.fw-600{
+    font-weight:600;
+}
+.fw-700{
+    font-weight:700;
+}
+.fw-800{
+    font-weight:800;
+}
+.fw-900{
+    font-weight:900;
+}
+/* 外層: .myroller 內層: .roller */
+.myroller{
+    position:relative;
+    overflow:hidden;
+  }
+.myroller .roller{
+    position:absolute;
+        width: 100%;
+        height: 100%;
+        background-image:linear-gradient(180deg,rgba(150,230,7,0.2),rgba(140,200,7,0.2)) ;
+       top:0;
+       left:-100%;
+       display: flex;
+       justify-content:center;
+       align-items:center;
+  }
+  .myroller:hover .roller{
+    left:0;
+    transition:left 1s;
+  }
+/* 上到下 */
+  .myrollerd{
+    position:relative;
+    overflow:hidden;
+  }
+.myrollerd .rollerd{
+    position:absolute;
+        width: 100%;
+        height: 100%;
+        background-image:linear-gradient(180deg,rgba(194, 209, 228, 0.2),rgba(184, 205, 224, 0.2)) ;
+       top:0;
+       top:-100%;
+       display: flex;
+       justify-content:center;
+       align-items:center;
+  }
+  .myrollerd:hover .rollerd{
+   top:0;
+    transition:top 1s;
+  }
+
+  /* 右到左 */
+  .myrollerr{
+    position:relative;
+    overflow:hidden;
+  }
+.myrollerr .rollerr{
+    position:absolute;
+        width: 100%;
+        height: 100%;
+        background-image:linear-gradient(180deg,rgba(194, 209, 228, 0.2),rgba(184, 205, 224, 0.2)) ;
+       top:0;
+       right:-100%;
+       display: flex;
+       justify-content:center;
+       align-items:center;
+  }
+  .myrollerr:hover .rollerr{
+   right:0;
+    transition: 1s;
+  }
+  /* 下到上 */
+  .myrollert{
+    position:relative;
+    overflow:hidden;
+  }
+.myrollert .rollert{
+    position:absolute;
+        width: 100%;
+        height: 100%;
+        background-image:linear-gradient(180deg,rgba(194, 209, 228, 0.2),rgba(184, 205, 224, 0.2)) ;
+        top: 100%;
+       display: flex;
+       justify-content:center;
+       align-items:center;
+  }
+  .myrollert:hover .rollert{
+   top:0;
+    transition: 1s;
+  }
+  /** 背景圖 */
+.bg-cover{
+    background-position: center center;
+    background-size: cover;
+    }
