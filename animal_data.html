@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動領領養</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .s02-text {
+            background-color: rgba(235, 214, 243, 0.2);
+            padding: 5px;
+        }
+
+        .navbar-nav .nav-link {
+            color: black;
+            /* 修改為你想要的顏色 */
+            padding: 10px 10px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(170, 122, 49, 0.534);
+            /* 當滑鼠懸停時的顏色 */
+            color: aliceblue;
+        }
+
+        @media screen and (max-width: 768px) {}
+
+        body {
+            font-family: "Zen Maru Gothic", serif;
+        }
+
+        #s01 i {
+            color: var(--mycolor11);
+        }
+
+        .dropdown-menu {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+            width: 200px;
+        }
+
+        .dropdown-item:hover {
+            color: #d95372;
+            /* 淡棕色作為高亮顏色 */
+        }
+
+        #admin_control_nav,
+        #public_adoption_nav {
+            font-size: 16px;
+            margin: 5px 0;
+            padding: 6px;
+            padding-left: 20px;
+            /* 向右移動 */
+        }
+
+        #s02_username_showtext {
+            color: var(--mycolor11);
+            margin-bottom: 20px;
+            /* 調整向下距離 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- section 01 -->
+    <section id="s01" style="background-color:#FFFAF2;" class="py-1">
+        <div class="container">
+            <div class="text-end">
+                <a href="#"><i class="fa-brands fa-facebook-f pe-1 tx-03"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter pe-1 tx-03"></i></a>
+                <a href="#"><i class="fa-brands fa-threads pe-1 tx-03"></i></a>
+                <a href="#"><i class="fa-brands fa-line pe-1 tx-03"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram pe-1 tx-03"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 02 -->
+    <section id="s02" class="bg-001">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-001 navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa fa-paw fa-regular fa-4x" style="color: #8b6f4f;"></i>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li class="nav-item dropdown bg-002 ms-5 fw-500">
+                                <a class="nav-link" href="animals.html">
+                                    <i class="fa-regular fa-heart nav-icon " aria-hidden="true"></i>
+                                    <span>首頁</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown bg-002 ms-5 fw-500">
+                                <a class="nav-link" href="animal_data.html">
+                                    <i class="fa-regular fa-heart nav-icon" aria-hidden="true"></i>
+                                    <span>公立領養</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown bg-002 ms-5 fw-500">
+                                <a class="nav-link" href="adopt_list.html">
+                                    <i class="fa-regular fa-heart nav-icon" aria-hidden="true"></i>
+                                    <span>領養認養</span>
+                                </a>
+                            </li>
+
+                            <li id="public_adoption_nav" class="d-none">
+                                <a class="dropdown-item" href="adopt_manage.html">領養刊登管理</a>
+                            </li>
+                            <li id="admin_control_nav" class="d-none">
+                                <a class="dropdown-item" href="admin_control.html">後台控制</a>
+                            </li>
+                        </ul>
+                        <div>
+
+                            <!-- 套用 CSS 變數 --mycolor01 -->
+                            <span class="h5 fw-900 me-3 mt-5 d-none" id="s02_username_showtext"
+                                style="color: var(--mycolor11);">
+                                <i class="fa-solid fa-user fa-xs"></i>
+                                <span class="h5" id="s02_username_text">XXX</span>
+                            </span>
+                            <button class="btn" data-bs-toggle="modal" data-bs-target="#registerModal"
+                                id="s02_reg_btn">|
+                                Register |</button>
+                            <button class="btn" data-bs-toggle="modal" data-bs-target="#loginModal" id="s02_login_btn">|
+                                Login |</button>
+                            <button class="btn d-none" id="s02_logout_btn">| 登出 |</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-l">
+            <div class="modal-content">
+                <div class="modal-header bg-005" style="color: black;">
+                    <h1 class="modal-title fs-4 fw-900" id="exampleModalLabel">領養人註冊</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-11">
+                            <div class="mb-3">
+                                <label for="username_reg" class="form-label">帳號</label>
+                                <input type="text" class="form-control is-invalid" id="username_reg" name="username_reg"
+                                    placeholder="3-6字數">
+                                <div class="valid-feedback" id="regModal_username_valid_feedback">符合規則</div>
+                                <div class="invalid-feedback" id="regModal_username_invalid_feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password_reg" class="form-label">密碼</label>
+                                <input type="password" class="form-control is-invalid" id="password_reg"
+                                    name="password_reg" placeholder="3-6字數">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="re_password_reg" class="form-label">確認密碼</label>
+                                <input type="password" class="form-control is-invalid" id="re_password_reg"
+                                    name="re_password_reg">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email_reg" class="form-label">Email</label>
+                                <input type="email" class="form-control is-invalid" placeholder="3-10字數" id="email_reg"
+                                    name="email_reg">
+                                <div class="valid-feedback">符合規則</div>
+                                <div class="invalid-feedback">不符合規則</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background-color: #f0e0da;"
+                        data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn bg-005" id="ok_btn_reg">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-005">
+                    <h1 class="modal-title  fs-4 fw-900" id="exampleModalLabel">領養人登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="username_login" class="form-label">帳號</label>
+                        <input type="text" class="form-control is-invalid" id="username_login" name="username_login">
+                        <div class="invalid-feedback">請輸入帳號</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password_login" class="form-label">密碼</label>
+                        <input type="password" class="form-control is-invalid" id="password_login"
+                            name="password_login">
+                        <div class="invalid-feedback">請輸入密碼</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" style="background-color: #f0e0da;"
+                        data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn bg-005" id="ok_btn_login">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section 3 動物資料卡片 -->
+
+    <!-- 篩選選單 -->
+    <!-- 篩選選單 -->
+    <div class="container-fluid border mx-4 mt-3 mb-3">
+        <div class="row justify-content-center  mt-2 mb-3">
+
+            <div class="col-md-3 form-group">
+                <select id="animalcity" class="form-select mt-2">
+                    <option value="" selected disabled>請選擇縣市</option>
+                </select>
+            </div>
+            <div class="col-md-3 form-group ">
+                <select id="animalsex" class="form-select mt-2">
+                    <option value="" selected disabled>請選擇性別</option>
+                    <option value="M">公</option>
+                    <option value="F">母</option>
+                </select>
+            </div>
+            <div class="col-md-3 form-group">
+                <select id="animaltype" class="form-select mt-2">
+                    <option value="" selected disabled>請選擇種類</option>
+                </select>
+            </div>
+            <!-- <div class="col-md-3 mt-2 form-group">
+                <button class="btn" style="background-color: #f0edda;" data-bs-toggle="modal" 
+                            >查詢</button>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- 動物資料卡片 -->
+    <section>
+        <div class="row ms-4" id="animalcard"></div>
+    </section>
+
+    </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        $(document).ready(function () {
+            checkLoginStatus();
+
+            $("#s02_logout_btn").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "ani_member_control_api_v1.php?action=logout",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.state) {
+                            setCookie("Uid01", "", -1);
+                            updateUI(false);
+                            Swal.fire("已登出", "", "success");
+                        } else {
+                            Swal.fire("登出失敗", response.message, "error");
+                        }
+                    },
+                    error: function () {
+                        Swal.fire("錯誤", "無法連線到伺服器", "error");
+                    }
+                });
+            });
+        });
+
+
+        // 即時監聽username_reg
+        $("#username_reg").bind("input propertychange", function () {
+            if ($(this).val().length > 2 && $(this).val().length < 7) {
+                var JSONdata = { username: $("#username_reg").val() };
+                $.ajax({
+                    type: "POST",
+                    url: "ani_member_control_api_v1.php?action=checkuni",
+                    data: JSON.stringify(JSONdata),
+                    dataType: "json",
+                    success: showdata_checkuni,
+                    error: function () {
+                        Swal.fire({
+                            title: "API介接錯誤?",
+                            text: "ani_member_control_api_v1.php?action=checkuni",
+                            icon: "error"
+                        });
+                    }
+                });
+            } else {
+                $(this).removeClass("is-valid").addClass("is-invalid");
+                $("#regModal_username_invalid_feedback").text("帳號長度需介於 3-6 字元！");
+                flag_username_reg = false;
+            }
+        });
+
+        // 即時監聽密碼輸入框
+        $("#password_reg").on("input", function () {
+            let password = $(this).val();
+            if (password.length >= 2) { // 只要2個字以上
+                $(this).removeClass("is-invalid").addClass("is-valid");
+            } else {
+                $(this).removeClass("is-valid").addClass("is-invalid");
+            }
+        });
+
+        // 即時監聽確認密碼輸入框
+        $("#re_password_reg").on("input", function () {
+            let password = $("#password_reg").val();
+            let rePassword = $(this).val();
+            if (rePassword === password && rePassword.length >= 2) { // 密碼一致且2字以上
+                $(this).removeClass("is-invalid").addClass("is-valid");
+            } else {
+                $(this).removeClass("is-valid").addClass("is-invalid");
+            }
+        });
+
+        // 即時監聽Email輸入框
+        $("#email_reg").on("input", function () {
+            let email = $(this).val();
+            if (email.length >= 2) { // 只要2個字以上
+                $(this).removeClass("is-invalid").addClass("is-valid");
+            } else {
+                $(this).removeClass("is-valid").addClass("is-invalid");
+            }
+        });
+
+        $("#ok_btn_reg").on("click", function () {
+            let username = $("#username_reg").val();
+            let password = $("#password_reg").val();
+            let rePassword = $("#re_password_reg").val();
+            let email = $("#email_reg").val();
+
+            if (!username || !password || !rePassword || !email) {
+                Swal.fire("請完整填寫所有欄位！");
+                return;
+            }
+
+            if (password !== rePassword) {
+                Swal.fire("密碼與確認密碼不一致！");
+                return;
+            }
+
+            let JSONdata = { username, password, email };
+
+            $.ajax({
+                type: "POST",
+                url: "ani_member_control_api_v1.php?action=register",
+                data: JSON.stringify(JSONdata),
+                dataType: "json",
+                success: function (response) {
+                    if (response.state) {
+                        Swal.fire({
+                            title: "註冊成功！",
+                            text: "歡迎 " + response.data.Username,
+                            icon: "success"
+                        }).then(() => {
+                            $("#registerModal").modal("hide");
+                            location.reload(); // 重新整理頁面
+                        });
+                    } else {
+                        Swal.fire({
+                            title: "註冊失敗",
+                            text: response.message,
+                            icon: "error"
+                        });
+                    }
+                },
+                error: function () {
+                    Swal.fire("API 錯誤", "無法連線到伺服器", "error");
+                }
+            });
+        });
+
+        // ok_btn_login 按鈕監聽
+        $("#ok_btn_login").on("click", function () {
+            var loginData = {
+                username: $("#username_login").val(),
+                password: $("#password_login").val()
+            };
+
+            $.ajax({
+                type: "POST",
+                url: "ani_member_control_api_v1.php?action=login",
+                data: JSON.stringify(loginData),
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    if (response.state) {
+                        Swal.fire({
+                            title: "登入成功！",
+                            text: "歡迎回來，" + response.data.Username,
+                            icon: "success"
+                        }).then(() => {
+                            setCookie("Uid01", response.data.Uid01, 7);
+                            updateUI(true, response.data.Username);
+                            $("#loginModal").modal("hide");
+                        });
+                    } else {
+                        Swal.fire({
+                            title: "登入失敗",
+                            text: response.message,
+                            icon: "error"
+                        });
+                    }
+                },
+                error: function (xhr) {
+                    Swal.fire({
+                        title: "錯誤",
+                        text: "無法連線到伺服器。",
+                        icon: "error"
+                    });
+                }
+            });
+        });
+
+        // 清除指定的 Cookie
+        function clearCookie(cname) {
+            document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+
+        // 登出按鈕監聽
+        $("#s02_logout_btn").click(function () {
+            var JSONdata = JSON.stringify({ uid01: getCookie("Uid01") });
+            console.log("發送至後端的 JSONdata：", JSONdata);
+
+            $.ajax({
+                type: "POST",
+                url: "ani_member_control_api_v1.php?action=logout",
+                data: JSONdata,
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    console.log("後端回應：", response);
+
+                    if (response.state) {
+                        // 清除 Cookie
+                        clearCookie("Uid01");
+
+                        // 更新介面
+                        updateUI(false);
+
+                        // 提示登出成功
+                        Swal.fire({
+                            title: "已登出",
+                            icon: "success"
+                        }).then(() => {
+                            location.reload();
+                        });
+                    } else {
+                        Swal.fire({
+                            title: "登出失敗",
+                            text: response.message || "登出時發生錯誤",
+                            icon: "error"
+                        });
+                    }
+                },
+                error: function (xhr) {
+                    console.error("登出請求失敗", xhr.responseText);
+                    Swal.fire({
+                        title: "錯誤",
+                        text: "無法連線到伺服器。",
+                        icon: "error"
+                    });
+                }
+            });
+        });
+
+        // 檢查帳號是否重複的回應處理
+        function showdata_checkuni(data) {
+            console.log("檢查帳號重複回應:", data);
+
+            if (data.state) {
+                $("#username_reg").removeClass("is-invalid").addClass("is-valid");
+                $("#regModal_username_valid_feedback").text(data.message);
+            } else {
+                $("#username_reg").removeClass("is-valid").addClass("is-invalid");
+                $("#regModal_username_invalid_feedback").text(data.message);
+            }
+        }
+
+
+
+        // 檢查登入狀態
+        function checkLoginStatus() {
+            var uid = getCookie("Uid01");
+            console.log("檢查登入狀態，Uid01:", uid);
+
+            if (uid) {
+                // 透過後端確認 uid 是否有效
+                $.ajax({
+                    type: "POST",
+                    url: "ani_member_control_api_v1.php?action=checkuid",
+                    data: JSON.stringify({ uid01: uid }),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        console.log("後端回應:", response);
+                        if (response.state) {
+                            updateUI(true, response.data.Username, response.data.role);  // 新增角色參數
+                        } else {
+                            updateUI(false);
+                            showLoginAlert(); // 沒有登入或失效則提示
+                        }
+                    },
+                    error: function () {
+                        console.error("檢查登入狀態失敗");
+                        updateUI(false);
+                        showLoginAlert(); // 如果後端沒回應也提示
+                    }
+                });
+            } else {
+                updateUI(false);
+                showLoginAlert(); // 沒有 Uid01 時直接提示
+            }
+        }
+
+        // 更新 UI        
+        function updateUI(isLoggedIn, username = "", role = "") {
+            if (isLoggedIn) {
+                $("#s02_reg_btn, #s02_login_btn").addClass("d-none");
+                $("#s02_logout_btn, #s02_username_showtext").removeClass("d-none");
+                $("#s02_username_text").text(username);
+
+                if (role === "admin") {
+                    $("#admin_control_nav, #public_adoption_nav").removeClass("d-none");  // 顯示後台控制與領養刊登管理選單
+                } else {
+                    $("#admin_control_nav").addClass("d-none");
+                    $("#public_adoption_nav").removeClass("d-none");  // 使用者登入後顯示領養刊登管理
+                }
+            } else {
+                $("#s02_reg_btn, #s02_login_btn").removeClass("d-none");
+                $("#s02_logout_btn, #s02_username_showtext").addClass("d-none");
+                $("#admin_control_nav, #public_adoption_nav").addClass("d-none");  // 登出時隱藏選單
+                $("#s02_username_text").text("");
+            }
+        }
+
+
+
+        // 設定 Cookie
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            document.cookie = `${cname}=${cvalue};expires=${d.toUTCString()};path=/`;
+        }
+
+        // 取得 Cookie
+        function getCookie(cname) {
+            let name = cname + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+
+        let animalsData = [];
+
+        // 載入資料
+        fetch('js/data.json')
+            .then(response => response.json())
+            .then(data => {
+                animalsData = data;
+                populateCityOptions(data);  // 動態產生縣市選項
+                populateTypeOptions(data);  // 動態產生種類選項
+                renderAnimalCards(data);     // 渲染動物卡片
+            })
+            .catch(error => console.error('載入動物資料時發生錯誤:', error));
+
+        // 🚩 動態產生縣市選項 (取 shelter_address 前三個字)
+        function populateCityOptions(data) {
+            const citySet = new Set(data
+                .map(animal => animal.shelter_address ? animal.shelter_address.substring(0, 3) : '')
+                .filter(city => city)
+            );
+            const citySelect = $('#animalcity');
+            citySelect.empty().append('<option value="" selected disabled>請選擇縣市</option>');
+            citySet.forEach(city => {
+                citySelect.append(new Option(city, city));
+            });
+        }
+
+        // 🚩 動態產生種類選項
+        function populateTypeOptions(data) {
+            const typeSet = new Set(data.map(animal => animal.animal_Variety).filter(type => type));
+            const typeSelect = $('#animaltype');
+            typeSelect.empty().append('<option value="" selected disabled>請選擇種類</option>');
+            typeSet.forEach(type => {
+                typeSelect.append(new Option(type, type));
+            });
+        }
+
+        // 🚩 篩選條件觸發過濾
+        $('.form-select').change(filterAnimals);
+
+        // 🚩 篩選動物資料並更新卡片
+        function filterAnimals() {
+            const selectedCity = $('#animalcity').val();
+            const selectedSex = $('#animalsex').val();
+            const selectedType = $('#animaltype').val();
+
+            const filteredAnimals = animalsData.filter(animal => {
+                const animalCity = animal.shelter_address ? animal.shelter_address.substring(0, 3) : '';
+                return (!selectedCity || animalCity === selectedCity) &&
+                    (!selectedSex || animal.animal_sex === selectedSex) &&
+                    (!selectedType || animal.animal_Variety === selectedType);
+            });
+
+            renderAnimalCards(filteredAnimals);
+        }
+
+        // 🚩 動態生成動物卡片
+        function renderAnimalCards(data) {
+            const animalContainer = $('#animalcard').empty();
+            if (data.length === 0) {
+                animalContainer.append('<p>沒有符合條件的動物。</p>');
+                return;
+            }
+            data.forEach(animal => {
+                const card = `
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="${animal.album_file || 'imgs/placeholder.jpg'}" class="card-img-top" alt="動物圖片" onerror="this.onerror=null; this.src='imgs/placeholder.jpg';">
+                    <div class="card-body">
+                        <h5 class="card-title">${animal.animal_Variety}</h5>
+                        <p class="card-text">編號: ${animal.animal_subid}</p>
+                        <p class="card-text">性別: ${animal.animal_sex === "M" ? "公" : "母"}</p>
+                        <p class="card-text">絕育狀態: ${animal.animal_sterilization === "T" ? "已完成絕育" : "未絕育"}</p>
+                        <p class="card-text">收容所: ${animal.shelter_name}</p>
+                        <p class="card-text">收容所聯絡電話: ${animal.shelter_tel}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+                animalContainer.append(card);
+            });
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Adoption Pie Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <style>
+        #charts-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .chart-box {
+            width: 30%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align: center;">動物收容統計 - 百分比分布</h2>
+    <div id="charts-container">
+        <div id="kindChart" class="chart-box"></div>
+        <div id="varietyChart" class="chart-box"></div>
+        <div id="shelterChart" class="chart-box"></div>
+    </div>
+
+    <script>
+        // 統計數據
+        const animalKindData = [
+            { value: 5519, name: '狗' },
+            { value: 884, name: '貓' },
+            { value: 9, name: '其他' }
+        ];
+
+        const animalVarietyData = [
+            { value: 5195, name: '混種犬' },
+            { value: 857, name: '混種貓' },
+            { value: 74, name: '混種狗' },
+            { value: 45, name: '貴賓犬' },
+            { value: 44, name: '柴犬' }
+        ];
+
+        const shelterData = [
+            { value: 1053, name: '臺北市動物之家' },
+            { value: 496, name: '臺南市動物之家善化站' },
+            { value: 462, name: '桃園市動物保護教育園區' },
+            { value: 376, name: '澎湖縣流浪動物收容中心' },
+            { value: 354, name: '雲林縣流浪動物收容所' }
+        ];
+
+        // 基本配置選項
+        function createPieChartOption(title, data) {
+            return {
+                title: {
+                    text: title,
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'item'
+                },
+                legend: {
+                    top: '5%',
+                    left: 'center'
+                },
+                series: [
+                    {
+                        name: title,
+                        type: 'pie',
+                        radius: ['40%', '70%'],
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 10,
+                            borderColor: '#fff',
+                            borderWidth: 2
+                        },
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: 16,
+                                fontWeight: 'bold'
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: data
+                    }
+                ]
+            };
+        }
+
+        // 初始化圖表
+        const kindChart = echarts.init(document.getElementById('kindChart'));
+        const varietyChart = echarts.init(document.getElementById('varietyChart'));
+        const shelterChart = echarts.init(document.getElementById('shelterChart'));
+
+        kindChart.setOption(createPieChartOption('動物種類分布', animalKindData));
+        varietyChart.setOption(createPieChartOption('品種分布', animalVarietyData));
+        shelterChart.setOption(createPieChartOption('收容所分布', shelterData));
+    </script>
+
+</body>
+
+</html>
